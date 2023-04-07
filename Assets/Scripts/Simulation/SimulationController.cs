@@ -17,24 +17,32 @@ public class SimulationController : MonoBehaviour
     public List<Vector3> Targets = new List<Vector3>();
     public List<GameObject> Obstacles = new List<GameObject>();
     public SimulatedObject SimulatedObject;
-    public SimulatedObject _simulatedObject;
+    private SimulatedObject _simulatedObject;
     public GameObject CollisionEffect;
     public AudioSource SoundEffect;
     #endregion
-
+    #region UNITY METHODS
     private void Start()
     {
         SetupObstacles();
         SetupSimulatedObject();
     }
-
+    #endregion
+    #region Simulation Logic
+    /// <summary>
+    /// Instantiate moving object
+    /// </summary>
     private void SetupSimulatedObject()
     {
         _simulatedObject = Instantiate(CurrentSimulation.SimulatedObject, CurrentSimulation.StartPoint,Quaternion.identity, this.transform);
         StartCoroutine(iTravel(_simulatedObject));
         _simulatedObject.OnCollision = CollisionOccured;
     }
-
+    /// <summary>
+    /// Move simulated object
+    /// </summary>
+    /// <param name="simulatedObject"></param>
+    /// <returns></returns>
     private IEnumerator iTravel(SimulatedObject simulatedObject)
     {
         int targetIndex = 0;
@@ -50,6 +58,7 @@ public class SimulationController : MonoBehaviour
         while (targetIndex < targets.Count)
         {
             Vector3 currentTarget = targets[targetIndex];
+            // If next movement will overshoot the target skip it
             while((simulatedObject.transform.position - currentTarget).magnitude>Time.deltaTime * CurrentSimulation.MoveSpeed)
             {
                 Vector3 velocity= (currentTarget - simulatedObject.thisRigid.position).normalized * Time.deltaTime * CurrentSimulation.MoveSpeed;
@@ -60,6 +69,7 @@ public class SimulationController : MonoBehaviour
             simulatedObject.thisRigid.MovePosition(currentTarget);
             yield return null;
             targetIndex++;
+            // Loop through targets infinitely
             if (CurrentSimulation.ShouldLoop && targetIndex>= targets.Count)
             {
                 targetIndex = 0;
@@ -81,7 +91,10 @@ public class SimulationController : MonoBehaviour
             SpawnObstacle(ChosenObstacle);
         }
     }
-
+    /// <summary>
+    /// Spanws obstacle in random position in the specified area
+    /// </summary>
+    /// <param name="chosenObstacle"></param>
     private void SpawnObstacle(GameObject chosenObstacle)
     {
         var obstacle = Instantiate(chosenObstacle, this.transform).gameObject;
@@ -115,7 +128,10 @@ public class SimulationController : MonoBehaviour
             Destroy(_simulatedObject.gameObject);
         }
     }
-
+    /// <summary>
+    /// Playe collision effects then after delay destroy simulated object for camera movement
+    /// </summary>
+    /// <param name="obstacle"></param>
     public async void CollisionOccured(GameObject obstacle)
     {
 
@@ -128,7 +144,7 @@ public class SimulationController : MonoBehaviour
 
     }
 
-
+    #endregion
     #region GIZMOS
     public bool ShowOrigin = true;
     public bool ShowSafe = true;
