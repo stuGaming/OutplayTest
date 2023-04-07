@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7af59cb0db5d5aa49af211a78fc2251e, type: 3}
-  m_Name: SimulationConfig_2
+  m_Name: SimulationConfig_NoLoop
   m_EditorClassIdentifier: 
   MoveSpeed: 10
   StartPoint: {x: 0, y: 0, z: 0}
@@ -18,7 +18,7 @@ MonoBehaviour:
   - {x: 0, y: -10.27, z: 8.35}
   - {x: 5.75, y: 11.63, z: 0}
   - {x: -11.94, y: 5, z: 7.1}
-  ShouldLoop: 1
+  ShouldLoop: 0
   RestartOnDeath: 0
   SimulatedObject: {fileID: -628569662066858289, guid: 7634480e6157c6c44bc937a40392bdd8, type: 3}
   ObstacleCount: 100

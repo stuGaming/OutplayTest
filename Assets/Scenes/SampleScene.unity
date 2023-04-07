@@ -581,7 +581,7 @@ PrefabInstance:
     - target: {fileID: 3512574042544972309, guid: 3eff600483186bf4d80612573c320db0, type: 3}
       propertyPath: CurrentSimulation
       value: 
-      objectReference: {fileID: 11400000, guid: 9c46cdaf218358549a6dc565b4bc56f2, type: 2}
+      objectReference: {fileID: 11400000, guid: 0746976b33f6e694897ac4a46d4f0113, type: 2}
     - target: {fileID: 3512574042544972309, guid: 3eff600483186bf4d80612573c320db0, type: 3}
       propertyPath: ShowObstacleSpawn
       value: 1
@@ -620,19 +620,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3512574042544972309, guid: 3eff600483186bf4d80612573c320db0, type: 3}
       propertyPath: Targets.Array.data[0].y
-      value: -3.97
+      value: -10.27
       objectReference: {fileID: 0}
     - target: {fileID: 3512574042544972309, guid: 3eff600483186bf4d80612573c320db0, type: 3}
       propertyPath: Targets.Array.data[0].z
-      value: 18.4
+      value: 8.35
       objectReference: {fileID: 0}
     - target: {fileID: 3512574042544972309, guid: 3eff600483186bf4d80612573c320db0, type: 3}
       propertyPath: Targets.Array.data[1].x
-      value: 25.6
+      value: 5.75
       objectReference: {fileID: 0}
     - target: {fileID: 3512574042544972309, guid: 3eff600483186bf4d80612573c320db0, type: 3}
       propertyPath: Targets.Array.data[1].y
-      value: 26.26
+      value: 11.63
       objectReference: {fileID: 0}
     - target: {fileID: 3512574042544972309, guid: 3eff600483186bf4d80612573c320db0, type: 3}
       propertyPath: Targets.Array.data[1].z
@@ -640,15 +640,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3512574042544972309, guid: 3eff600483186bf4d80612573c320db0, type: 3}
       propertyPath: Targets.Array.data[2].x
-      value: -45.04
+      value: -11.94
       objectReference: {fileID: 0}
     - target: {fileID: 3512574042544972309, guid: 3eff600483186bf4d80612573c320db0, type: 3}
       propertyPath: Targets.Array.data[2].y
-      value: 9.26
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3512574042544972309, guid: 3eff600483186bf4d80612573c320db0, type: 3}
       propertyPath: Targets.Array.data[2].z
-      value: -20.02
+      value: 7.1
       objectReference: {fileID: 0}
     - target: {fileID: 3512574042544972309, guid: 3eff600483186bf4d80612573c320db0, type: 3}
       propertyPath: Targets.Array.data[3].y
