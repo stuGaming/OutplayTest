@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af59cb0db5d5aa49af211a78fc2251e, type: 3}
+  m_Name: SimulationConfig_1
+  m_EditorClassIdentifier: 
+  MoveSpeed: 10
+  StartPoint: {x: 0, y: 0, z: 0}
+  Targets:
+  - {x: 0, y: -10.27, z: 8.35}
+  - {x: 5.75, y: 11.63, z: 0}
+  - {x: -11.94, y: 5, z: 7.1}
+  ShouldLoop: 1
+  RestartOnDeath: 0
+  SimulatedObject: {fileID: -628569662066858289, guid: 7634480e6157c6c44bc937a40392bdd8, type: 3}
+  ObstacleCount: 100
+  Obstacles:
+  - {fileID: 1850563041485060475, guid: 9fe90c8ec7a322e44a229d66076034d7, type: 3}
+  - {fileID: 1850563041485060475, guid: 34463fe460e3c5040853fcf89adb9980, type: 3}
+  - {fileID: 1850563041485060475, guid: 7e9fa4db89cd8904fb47a0ed4bd67cdb, type: 3}
+  - {fileID: 1850563041485060475, guid: 5d971a7447437834c8d3538dae17d8e6, type: 3}
+  - {fileID: 1850563041485060475, guid: ad5a0f3d065e85f41ac0dbba7d690593, type: 3}
+  ObstacleSafeSpace: 5
+  ObstaleSpawnSpace: 20
+  CollisionEffect: {fileID: 1144200186513350, guid: cf2438a9b8e0e854f835d26c98fb302b, type: 3}
+  SoundEffect: {fileID: 1716233309117981429, guid: dfc58e61053ddae45bb6f543b601b775, type: 3}
